@@ -1,24 +1,24 @@
-
-<div class="table-responsive">
+<div class="table-responsive mt-5">
     <table class="table table-primary">
         <thead>
             <tr>
-                <th scope="col">Column 1</th>
-                <th scope="col">Column 2</th>
-                <th scope="col">Column 3</th>
+                <th scope="col">ID</th>
+                <th scope="col">DESCRIPTION</th>
+                <th scope="col">STATUS</th>
+                <th scope="col">DATE</th>
             </tr>
         </thead>
         <tbody>
-            <tr class="">
-                <td scope="row">R1C1</td>
-                <td>R1C2</td>
-                <td>R1C3</td>
-            </tr>
-            <tr class="">
-                <td scope="row">Item</td>
-                <td>Item</td>
-                <td>Item</td>
-            </tr>
+            @foreach ($projects as $project)
+                <tr>
+                    <td scope="row">{{$project->id}}</td>
+                    <td>{{$project->title}}</td>
+                    <td>{{$project->description}}</td>
+                    <td>{{$project->authors}}</td>
+                    <td>{{$project->slug}}</td>
+                </tr>
+            @endforeach
+
         </tbody>
     </table>
 </div>
