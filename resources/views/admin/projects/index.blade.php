@@ -1,7 +1,13 @@
-<div class="table-responsive mt-5">
+@extends('layouts.admin')
+
+@section('content')
+    
+
+<div class="table-responsive">
     <table class="table table-primary">
         <thead>
-            <tr>
+
+            <tr class="">
                 <th scope="col">ID</th>
                 <th scope="col">DESCRIPTION</th>
                 <th scope="col">STATUS</th>
@@ -9,6 +15,7 @@
             </tr>
         </thead>
         <tbody>
+
             @foreach ($projects as $project)
                 <tr>
                     <td scope="row">{{$project->id}}</td>
@@ -22,3 +29,5 @@
         </tbody>
     </table>
 </div>
+
+@endsection
