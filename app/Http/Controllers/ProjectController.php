@@ -26,9 +26,12 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $project = new Project();
-        $project->description = $request->description;
         $project->title = $request->title;
+        $project->thumb = $request->thumb;
+        $project->description = $request->description;
         $project->authors = $request->authors;
+        $project->slug = $request->slug;
+        $project->tech = $request->tech;
         $project->save();
         return to_route('project.index');
     }

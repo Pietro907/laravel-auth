@@ -15,12 +15,19 @@ class ProjectSeeder extends Seeder
      */
     public function run(Faker $faker): void
     {
+        
         for ($i=0; $i <5 ; $i++) { 
             $proj = new Project();
             $proj->title = $faker->realText(10);
+            
+            
+            $proj->thumb = $faker->imageUrl(400, 300, 'project', false);
+
+            //$proj->thumb = $faker->imageUrl(640, 480, 'animals', true);
             $proj->description = $faker->realText(20);
             $proj->authors = $faker->name();
             $proj->slug = Str::slug($proj->title, '-');
+            $proj->tech = $faker->realText(10);
             $proj->save();
         }
     }
