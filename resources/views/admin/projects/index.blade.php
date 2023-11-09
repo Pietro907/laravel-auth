@@ -34,9 +34,11 @@
                         <td>
                             <a href="project/{project}">{{ $project->slug }}</a>
 
-                            <button class="btn btn-primary text-white px-2 py-0 my-2 fs-6" type="submit">View</button>
-                            <button class="btn btn-secondary text-white px-2 py-0 my-2 fs-6" type="submit">Edit</button>
-                            <button class="btn btn-danger text-white px-2 py-0 my-2 fs-6" type="submit">Delete</button>
+                            <a class="btn btn-primary text-white px-2 py-0 my-2 fs-6" type="submit" href="">View</a>
+                            <a class="btn btn-secondary text-white px-2 py-0 my-2 fs-6" type="submit" href="{{ route('project.create') }}">Edit</a>
+                            
+                            @method('DELETE')
+                            <a class="btn btn-danger text-white px-2 py-0 my-2 fs-6" type="submit" href="{{ route('project.index') }}">Delete</a>
                         </td>
                         <td>{{ $project->tech}}</td>
                     </tr>
