@@ -21,10 +21,10 @@ class ProjectSeeder extends Seeder
             $proj->title = $faker->realText(10);
             
             
-            $proj->thumb = $faker->imageUrl(400, 300, 'project', false);
+            $proj->thumb = $faker->imageUrl(150, 150, 'project', false);
 
             //$proj->thumb = $faker->imageUrl(640, 480, 'animals', true);
-            $proj->description = $faker->realText(20);
+            $proj->description = $faker->sentence(30);
             $proj->authors = $faker->name();
             $proj->slug = Str::slug($proj->title, '-');
             $proj->tech = $faker->realText(10);
