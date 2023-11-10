@@ -22,3 +22,5 @@ Implementiamo la validazione dei dati dei Progetti nelle operazioni CRUD che lo 
 
 
 - collegare page soft delete
+
+- stile tutte pagine

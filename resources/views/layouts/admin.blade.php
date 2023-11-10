@@ -77,7 +77,7 @@
                                     <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Dashboard
                                 </a>
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'project.index'}}" href="{{route('project.index')}}">
-                                    <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Projects
+                                    <i class="fa-solid fa-laptop-file fa-lg fa-fw"></i> Projects
                                 </a> 
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'project.index'}}" href="{{route('project.index')}}">
                                     <i class="fa-solid fa-dumpster fa-lg fa-fw"></i> Trashed
