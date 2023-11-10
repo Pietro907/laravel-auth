@@ -32,6 +32,8 @@ class ProjectController extends Controller
         $project->authors = $request->authors;
         $project->slug = $request->slug;
         $project->tech = $request->tech;
+        $project->link = $request->link;
+        $project->github_link = $request->github_link;
         $project->save();
         return to_route('project.index');
     }
@@ -51,6 +53,11 @@ class ProjectController extends Controller
     /* Update the specified resource in storage. */
     public function update(Request $request, Project $project)
     {
+
+        $valitaded = $request->validate([
+            'title' => 'require|unique|max 50|min 10',
+        ]);
+
         $data = $request->all();
         $project->update($data);
         return redirect()->route('project.show', $project->id);

@@ -24,6 +24,8 @@ Route::get('/dashboard', function () {     //autenticare il percorso del link ne
     return view('admin.dashboard');
 });
 
+
+
 Route::get('/admin', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

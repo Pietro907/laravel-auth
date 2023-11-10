@@ -76,6 +76,13 @@
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.dashboard' ? 'bg-secondary' : '' }}" href="{{route('dashboard')}}">
                                     <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Dashboard
                                 </a>
+                                <a class="nav-link text-white {{ Route::currentRouteName() == 'project.index'}}" href="{{route('project.index')}}">
+                                    <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Projects
+                                </a> 
+                                <a class="nav-link text-white {{ Route::currentRouteName() == 'project.index'}}" href="{{route('project.index')}}">
+                                    <i class="fa-solid fa-dumpster fa-lg fa-fw"></i> Trashed
+                                    
+                                </a> 
                             </li>
 
                         </ul>

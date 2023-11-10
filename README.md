@@ -16,3 +16,9 @@ Per la parte di back-office creiamo un resource controller Admin\\ProjectControl
 
 Bonus
 Implementiamo la validazione dei dati dei Progetti nelle operazioni CRUD che lo richiedono usando due form requests. -->
+
+
+
+
+
+- collegare page soft delete
